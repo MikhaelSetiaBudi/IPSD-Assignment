@@ -3,7 +3,7 @@
 
 ## Dasar Teori
 ### Variabel dan Tipe Data 
-Variabel merupakan tempat atau wadah untuk menyimpan data. terdapat aturan penamaan seperti menggunakan huruf, angka, atau underscore, dan tidak boleh diawali angka.
+Variabel merupakan tempat atau wadah untuk menyimpan data. terdapat aturan penamaan seperti menggunakan huruf, angka, atau underscore, dan tidak boleh diawali angka. struktur dasar kode Python yang digunakan dalam Data Science, termasuk pemahaman tentang sintaks, variabel, tipe data, dan operasi dasar [1].
 
 tipe data dasar dalam python yaitu:
 1. Integer (int) merupakan tipe data bilangan bulat positif
@@ -1134,7 +1134,9 @@ Nilai 10 berada di indeks 4.
 ![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Unguided%2010.png)
 
 ## Kesimpulan
-Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+Python untuk sains data banyak digunakan mulai dari algoritma pencarian, simulasi ATM, pengolahan data, hingga membuat permainan yang interaktif. kode tersebut banyak menggunakan fungsi untuk mengorganisasikan logika program, selain itu kode dirancang untuk berinteraksi dengan pengguna secara langsung melalui input maupun memberikan umpan balik. program python memanfaatkan berbagai struktur data seperti daftar dan Data Frame untuk menyimpan dan memanipulasikan data.
 
 ## Referensi
-[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
+[1]	  A. M. Priyatno, F. I. Firmanda, R. J. Farhas, F. Amalia, and W.         F. R. Sudirman, “Pelatihan Data Science menggunakan Bahasa              Pemrograman Python di PT Ilmu Data Indonesia,” Dedik. J.                Pengabdi. Pendidik. dan Teknol. Masy., vol. 1, no. 1, pp. 31–36,        2023, doi: 10.31004/dedikasi.v1i1.12.
+
+
