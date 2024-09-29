@@ -2,17 +2,123 @@
 <p align="center">Mikhael Setia Budi</p>
 
 ## Dasar Teori
+### Variabel dan Tipe Data 
+Variabel merupakan tempat atau wadah untuk menyimpan data. terdapat aturan penamaan seperti menggunakan huruf, angka, atau underscore, dan tidak boleh diawali angka.
 
+tipe data dasar dalam python yaitu:
+1. Integer (int) merupakan tipe data bilangan bulat positif
+2. Float merupakan tipe data bilangan desimal
+3. String merupakan tipe data karakter
+5. Boolean merupakan tipe data true and false
 
+### Operator dan Logika
+Operator digunakan untuk melakukan operasi matematika dan logika.
+
+#### Operator Aritmatika
+operator yang digunakan untuk operasi matematis seperti penjumlahan, pengurangan, perkalian, pembagian, dan eksponensial.
+
+#### Operator Perbandingan
+Operator ini digunakan untuk membandingkan dua nilai
+    1. == sama dengan
+    2. != tidak sama dengan
+    >,<,>=,<= membandingkan besar dan kecil.
+
+#### Operator Logika
+Operator yang digunakan untuk menggabungkan ekspresi boolean seperti:
+1. and bernlai true jika kedua operand bernilai true
+2. or: Bernilai True jika salah satu operand bernilai True
+3. not: Membalik nilai boolean
+
+### Fungsi dan Perulangan
+#### Fungsi
+Fungsi merup[akan blok kode yang bisa digunakan kembali. 
+1. Definisi : menggunakan def diikuti nama fungsi
+2. Fungsi Built-in: Python memiliki fungsi bawaan seperti len(), sum(), max().
+
+#### Pengulangan (loops)
+pengulangan digunakan untuk mengiterasi elemen-elemen dalam struktur data.
+
+### Percabangan
+Percabangan digunakan untuk pengambilan keputusan berdasarkan kondisi.
+
+#### if, elif, dan else 
+blok kode tertentu akan berjalan jika kondisi terpenuhi.
+
+#### Nested Condirionals
+percabangan di dalam percabangan atau percabangan bersarang.
 
 ## Guided 
 
-### 1. [Nama Topik]
+### 1. Buat program yang menampilkan nama dan umur
 
-```python
-print("ini adalah file code guided praktikan")
+#### Jawaban
 ```
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function print untuk mengeksekusi nya.
+nama = "Budi"
+umur = 20
+print(f"Nama : {nama} \nUmur : {umur}")
+```
+Kode di atas mendeklarasikan variabel nama dan umur, lalu menampilkan nama dan umur dengan perintah print, \n digunakan untuk pindah baris.
+
+#### Output
+```
+Nama : Budi 
+Umur : 20
+```
+Menampilkan nama dan umur dari budi.
+
+
+
+
+### 2. Buat program yang menerima input dan menampilkan kalimat tersebut sebanyak 5 kali
+
+#### Jawaban
+```
+sentence = input("Masukkan Kalimat: ")
+for _ in range(5):
+    print(sentence)
+```
+Kode diatas mendeklarasikan variabel sentence yang di dalamnya akan meminta user untuk menginputkan kalimat. lalu for _ in rang (5) merupakan kondisi dimana kata akan ditampilkan sebanyak 5 kali. Lalu memanggil variabel sentence.
+
+#### Output
+```
+Masukkan Kalimat:  Data Science
+Data Science
+Data Science
+Data Science
+Data Science
+Data Science
+```
+kegtika program dijalankan maka program akan meminta input kalimat ke user, setelah kalimat di inputkan maka program akan menampilkan sebanyak 5 kali.
+
+### 3. Buat program yang memeriksa apakah sebuah nilai lebih besar dari 100
+
+#### Jawaban 
+```
+value = 150
+if value > 100:
+    print("lebih dari 100")
+else:
+    print("100 atau kurang dari")
+```
+Membuat variabel value diisi dengan nilai 150. lalu membuat kondisi jika value lebih dari 100 maka akan menampilkan lebih dari 100 tetapi jika value < 100 maka akan menampilkan 100 atau kurang dari.
+
+#### Output
+```
+lebih dari 100
+```
+karena value > 100 maka menampilkan tulisan lebih dari 100.
+
+### 4. Buat program untuk menentukan apakah seseorang boleh memberikan suara berdasarkan umurnya
+
+#### Jawaban
+```
+age = 18
+if age >= 18:
+    print("Boleh memberikan suara")
+else:
+    print("Tidak boleh memberikan suara")
+```
+Membuat variabel ange dengan nilai 18, lalu membuat kondisi jika age lebih dari sama dengan 18 maka akan menampilkan pesan Boleh memberikan suara, tetapi jika tidak maka akan menampilkan pesan tidak boleh memberikan suara
 
 ## Unguided 
 
