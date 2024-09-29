@@ -1,0 +1,368 @@
+# <h1 align="center">Laporan Praktikum Modul Dasar-Dasar Python untuk Sains Data</h1>
+<p align="center">Mikhael Setia Budi</p>
+
+## Dasar Teori
+
+
+
+## Guided 
+
+### 1. [Nama Topik]
+
+```python
+print("ini adalah file code guided praktikan")
+```
+Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function print untuk mengeksekusi nya.
+
+## Unguided 
+
+### 1. Memecahkan Masalah Unik dengan Loop dan If-Else
+Buatlah program yang dapat menghasilkan pola berbentuk angka seperti di bawah ini, dengan syarat angka yang ditampilkan adalah hasil dari penjumlahan bilangan prima sebelumnya:
+```
+1
+2 3
+5 7 11
+13 17 19 23
+...
+```
+Jumlah angka pada setiap baris bertambah 1, dan bilangan yang ditampilkan adalah bilangan prima.
+
+#### Jawaban
+```
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def generate_primes(n):
+    primes = []
+    num = 2  
+    while len(primes) < n:
+        if is_prime(num):
+            primes.append(num)
+        num += 1
+    return primes
+
+def print_prime_pattern(rows):
+    total_numbers = (rows * (rows + 1)) // 2  
+    primes = generate_primes(total_numbers)
+
+    print(1)  
+    index = 0
+
+    for i in range(2, rows + 1):  
+        for j in range(i):
+            if index < len(primes):
+                print(primes[index], end=' ')
+                index += 1
+        print()  
+
+jumlah_baris = 4  
+print_prime_pattern(jumlah_baris)
+```
+
+**Code 1**
+```
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+```
+Fungsi is_prime digunakan untuk menentukan apakah sebuah angka (num) adalah bilangan prima.
+Sebuah kondisi jika num kurang dari 2 maka akan mengembalikan false. Lalu menggunakan loop untuk memeriksa pembagian dari 2 hinggga akar kuadrat dari num.
+Jika tidak ada pembagian yang ditemukan maka akan mengembalikan true.
+
+**Code 2**
+```
+def generate_primes(n):
+    primes = []
+    num = 2  
+    while len(primes) < n:
+        if is_prime(num):
+            primes.append(num)
+        num += 1
+    return primes
+```
+Fungsi generate_primes(n) digunakan untuk menghasilkan n bilangan prima. 
+Membuat list kosong primes untuk menyimpan bilangan prima, dengan memulai num sebagai 2.
+Menggunakan loop while untuk mencari bilangan prima sampai jumlah n tercapai.
+Lalu memanggil fungsi is_prime(num) untuk memeriksa num apakah bilangan prima, jika benar maka num ditambahkan ke dalam list primes.
+Setelah looping selesai maka akan mengembalikan list primes yang berisikan bilangan prima.
+
+**Code 3**
+```
+def print_prime_pattern(rows):
+    total_numbers = (rows * (rows + 1)) // 2  
+    primes = generate_primes(total_numbers)
+
+    print(1)  
+    index = 0
+
+    for i in range(2, rows + 1):  
+        for j in range(i):
+            if index < len(primes):
+                print(primes[index], end=' ')
+                index += 1
+        print()
+```
+Fungsi print_prime_pattern(rows) digunakan untuk mencetak pola bilangan prima dengan bentuk segitiga sesuai dengan jumlah baris.
+Menghitung jumlah angka yang dibutuhkan menggunakan rumus segitiga. Menghasilkan bilangan prima sebanyak total_number dengan menggunakan fungsi generate_primes, lalu mencetak angka 1 di awal.
+Menggunakan dua loop dimana loop luar mengintegrasi dari 2 hingga rows, dan loop dalam mencetak angka untuk setiap barisnya.
+index digunakan untuk melacak posisi dalam list primes dan mencetak bilangan sesuai dengan index.
+print() dipanggil untuk pindah ke baris yang baru.
+
+**Code 4**
+```
+jumlah_baris = 4  
+print_prime_pattern(jumlah_baris)
+```
+Kode diatas digunakan untuk mengeksekusi program. Kode diatas mengatur jumlah_baris ke 4 yang artinya pola yang akan dicetak memiliki 4 baris.
+Kode print_prime_pattern(jumlah baris) dipanggil untuk mencetak pola bilangan prima
+
+#### Output
+```
+1
+2 3 
+5 7 11 
+13 17 19 23 
+```
+Output membentuk segitiga dengan bilangan prima 2 sampai 23.
+
+#### Screenshot Program:
+
+
+#### Screenshot Output:
+![image](https://github.com/user-attachments/assets/fc05c081-b447-4e91-a2fc-24f481d8a593)
+
+
+Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function print untuk mengeksekusi nya.
+
+### 2. Membuat Fungsi dengan Syarat Spesifik
+Buatlah sebuah fungsi yang menerima dua input berupa list angka. Fungsi ini harus mengembalikan sebuah list baru yang berisi elemen dari dua list input yang memiliki indeks ganjil. 
+List baru tersebut juga harus diurutkan secara menurun berdasarkan nilai elemen.
+
+#### Jawaban
+```
+def combine_and_sort_odd_indices(list1, list2):
+    odd_indexed_elements = []
+    odd_indexed_elements.extend(list1[i] for i in range(1, len(list1), 2))
+    odd_indexed_elements.extend(list2[i] for i in range(1, len(list2), 2))
+    odd_indexed_elements.sort(reverse=True)
+    return odd_indexed_elements
+
+list1 = [10, 20, 30, 40, 50]
+list2 = [5, 15, 25, 35, 45]
+
+result = combine_and_sort_odd_indices(list1, list2)
+print(result) 
+```
+
+**Code 1**
+```
+def combine_and_sort_odd_indices(list1, list2):
+    odd_indexed_elements = []
+    odd_indexed_elements.extend(list1[i] for i in range(1, len(list1), 2))
+    odd_indexed_elements.extend(list2[i] for i in range(1, len(list2), 2))
+    odd_indexed_elements.sort(reverse=True)
+    return odd_indexed_elements
+```
+Fungsi combune_and_sort_odd_indices digunakan untuk menggambungkan elemen-elemen yang terletak pada indeks ganjil dari dua daftar yaitu list1 dan list2, lalu mengurutkan dalam urutan menurun.
+Membuat variabel odd_indexed_elements untuk menyimpan elemen yang diambil dari indeks ganjil.
+Menggunakan generator expression untuk mengambil elemen dari list1 pada indeks ganjil.
+range(1, len(list1), 2) digunakan untuk menghasilkan angka mulai dari 1 hingga panjang list.
+Kode diatas juga digunakan unruk mengurutkan elemen odd_indexed_elements dengan urutan menurun, dan mengembalikan list yang telah diisi dengan elemen dari indeks ganjil.
+
+**Code 2**
+```
+list1 = [10, 20, 30, 40, 50]
+list2 = [5, 15, 25, 35, 45]
+
+result = combine_and_sort_odd_indices(list1, list2)
+print(result)
+```
+Kode diatas menginisialisasi list1 dan list2. Lalu memanggil fungsi combine_and_sort_odd_indices(list1, list2) dipanggil dengan list1 dan list2 sebagai argumen, setelah itu hasilnya disimpan di variabel result.
+print(result) digunakan untuk mencetak isi dari result.
+
+#### Output
+```
+[40, 35, 20, 15]
+```
+Output menampilkan angka dari indeks ganjil.
+
+#### Screenshot Program:
+
+
+#### Screenshot Output:
+
+### 3. Buat sebuah program untuk mensimulasikan transaksi ATM. Program harus:
+1. Meminta pengguna memasukkan PIN (dibatasi 3 kali percobaan).
+2. Setelah PIN benar, meminta jumlah penarikan.
+3. Jika saldo kurang dari jumlah yang ditarik, munculkan pesan kesalahan.
+4. Jika penarikan berhasil, tampilkan saldo akhir.
+
+#### Jawaban
+```
+def atm_simulation():
+    correct_pin = "1234"  
+    attempts = 3  
+    balance = 100000   
+    
+    for attempt in range(attempts):
+        pin = input("Masukkan PIN Anda: ")
+        if pin == correct_pin:
+            print("PIN benar!")
+            break
+        else:
+            print("PIN salah. Coba lagi.")
+            if attempt == attempts - 1:
+                print("Anda telah mencoba terlalu banyak kali. Transaksi dibatalkan.")
+                return
+
+    try:
+        withdrawal_amount = float(input("Masukkan jumlah penarikan: "))
+    
+        if withdrawal_amount > balance:
+            print("Kesalahan: Saldo tidak cukup untuk penarikan tersebut.")
+        else:
+            balance -= withdrawal_amount
+            print(f"Penarikan berhasil! Saldo akhir Anda: {balance}")
+    except ValueError:
+        print("Input tidak valid. Harap masukkan jumlah yang benar.")
+
+atm_simulation()
+```
+
+**Code 1**
+```
+def atm_simulation():
+```
+Kode diatas digunakan untuk mendefinisikan fungsi atm_simulation.
+
+**Code 2**
+```
+correct_pin = "1234"  
+    attempts = 3  
+    balance = 100000 
+```
+Membuat variabel correct_pin digunakan untuk menyimpan PIN yang benar untuk autentikasi, disini diatur dengan PIN "1234". 
+Variabel attempts digunakan untuk menentukan jumlah maksimal percobaan untuk memasukkan PIN nya, Percobaan PIN dilakukan sebanyak 3 kali.
+Lalu berikutnya membuat variabel balance untuk menyimpan saldo awal pengguna di ATM dimana untuk saldo diatur sebanyak 100000.
+
+**Code 3**
+```
+for attempt in range(attempts):
+        pin = input("Masukkan PIN Anda: ")
+        if pin == correct_pin:
+            print("PIN benar!")
+            break
+        else:
+            print("PIN salah. Coba lagi.")
+            if attempt == attempts - 1:
+                print("Anda telah mencoba terlalu banyak kali. Transaksi dibatalkan.")
+                return
+```
+Kode diatas menggunakan loop untuk memeriksa PIN. loop for digunakan untuk memberikan pengguna hingga 3 percobaan dalam memasukkan PIN.
+menggunakan input untuk mengambil input PIN yang dimasukkan oleh pengguna. Apabila PIN yang dimasukkan sama dengan correct_pin maka akan mencetak kata "PIN benar!" dan keluar dari loop.
+Jika PIN salah maka akan mencetak kata "PIN salah. Coba lagi". Jika percobaan terakhir dalam memasukkan PIN maka mencetak pesan transaksi dibatalkan dan keluar fungsi dengan return.
+
+**Code 4**
+```
+  try:
+        withdrawal_amount = float(input("Masukkan jumlah penarikan: "))
+    
+        if withdrawal_amount > balance:
+            print("Kesalahan: Saldo tidak cukup untuk penarikan tersebut.")
+        else:
+            balance -= withdrawal_amount
+            print(f"Penarikan berhasil! Saldo akhir Anda: {balance}")
+    except ValueError:
+        print("Input tidak valid. Harap masukkan jumlah yang benar.")
+```
+Kode diatas digunakan untuk penarikan uang, dengan menggunakan blok try untuk menangani kesalahan saat input. Lalu kode diatas digunakan untuk mengambil input yang ingin ditarik dan mengonversinya menjadi float.
+Jika jumlah penarikan lebih besar dari balance maka akan mencetak pesan kesalahan.
+Jika valid maka akan mengurangi withdrawal_amount dari balance dan saldo akhir ditampilkan.
+Jika input ke float gagal maka akan mencetak pesan bahwa input tidak valid
+
+**Code 5**
+```
+atm_simulation()
+```
+Memanggil fungsi atm_simulation() untuk menjalankan simulasi ATM.
+
+#### Output
+```
+Masukkan PIN Anda:  1234
+PIN benar!
+Masukkan jumlah penarikan:  50000
+Penarikan berhasil! Saldo akhir Anda: 50000.0
+```
+output yang ditampilkan adalah user memasukkan PIN atm nya jika benar maka user dapat memasukkan nominal yang ingin ditarik, setelah nominal yang ditarik berhasil maka akan menampilkan saldo akhir sete;ah ditarik.
+
+#### Screenshot Program:
+
+
+#### Screenshot Output:
+
+### 4. Studi Kasus Pengelolaan Data
+Anda diberikan file CSV berisi data nilai ujian mahasiswa. Tugas Anda adalah menulis sebuah program yang:
+1. Membaca file CSV dan menyimpan datanya ke dalam dictionary.
+2. Menghitung rata-rata nilai tiap mahasiswa.
+3. Menampilkan mahasiswa dengan nilai tertinggi dan terendah
+
+#### Jawaban
+```
+import pandas as pd
+
+def baca_data_csv(nama_file):
+    return pd.read_csv(nama_file)
+
+def hitung_rata_rata_nilai(data_mahasiswa):
+    return data_mahasiswa['Nilai'].mean()
+
+def mahasiswa_terbaik_dan_terburuk(data_mahasiswa):
+    mahasiswa_terbaik = data_mahasiswa.loc[data_mahasiswa['Nilai'].idxmax()]
+    mahasiswa_terburuk = data_mahasiswa.loc[data_mahasiswa['Nilai'].idxmin()]
+    return mahasiswa_terbaik, mahasiswa_terburuk
+
+def main():
+    nama_file = 'siswa_nilai.csv'    
+    data_mahasiswa = baca_data_csv(nama_file)
+    rata_rata = hitung_rata_rata(data_mahasiswa)
+    print(f"Rata-rata nilai: {rata_rata:.2f}")
+    terbaik, terburuk = mahasiswa_terbaik_dan_terburuk(data_mahasiswa)
+    print(f"\nMahasiswa dengan nilai tertinggi: {terbaik['Nama Siswa']} ({terbaik['Nilai']:.2f})")
+    print(f"Mahasiswa dengan nilai terendah: {terburuk['Nama Siswa']} ({terburuk['Nilai']:.2f})")
+
+if __name__ == "__main__":
+    main()
+```
+
+**Code 1**
+```
+import pandas as pd
+```
+Kode diatas digunakan untuk mengimport library pandas yang merupakan alat untuk analisis data dan memanipulasi struktur data dalam python.
+
+**Code 2**
+```
+def baca_data_csv(nama_file):
+    return pd.read_csv(nama_file)
+```
+Mendefinisikan fungsi baca_data_csv untuk mengambil satu argumen yang merupakan nama file CSV yang akan dibaca.
+pd.read_csv(nama_file) digunakan untuk membaca file CSV dan mengembalikan sebagai objek DataFrame pandas.
+
+**Code 3**
+
+
+
+## Kesimpulan
+Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
+
+## Referensi
+[1] I. Holm, Narrator, and J. Fullerton-Smith, Producer, How to Build a Human [DVD]. London: BBC; 2002.
