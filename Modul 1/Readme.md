@@ -66,8 +66,11 @@ Umur : 20
 ```
 Menampilkan nama dan umur dari budi.
 
+#### Screenshot Program:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Guided%201.png)
 
-
+#### Screenshot Output:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Guided%201.png)
 
 ### 2. Buat program yang menerima input dan menampilkan kalimat tersebut sebanyak 5 kali
 
@@ -90,6 +93,12 @@ Data Science
 ```
 kegtika program dijalankan maka program akan meminta input kalimat ke user, setelah kalimat di inputkan maka program akan menampilkan sebanyak 5 kali.
 
+#### Screenshot Program:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Guided%202.png)
+
+#### Screenshot Output:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Guided%202.png)
+
 ### 3. Buat program yang memeriksa apakah sebuah nilai lebih besar dari 100
 
 #### Jawaban 
@@ -108,6 +117,12 @@ lebih dari 100
 ```
 karena value > 100 maka menampilkan tulisan lebih dari 100.
 
+#### Screenshot Program:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Guided%203.png)
+
+#### Screenshot Output:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Guided%203.png)
+
 ### 4. Buat program untuk menentukan apakah seseorang boleh memberikan suara berdasarkan umurnya
 
 #### Jawaban
@@ -119,6 +134,12 @@ else:
     print("Tidak boleh memberikan suara")
 ```
 Membuat variabel ange dengan nilai 18, lalu membuat kondisi jika age lebih dari sama dengan 18 maka akan menampilkan pesan Boleh memberikan suara, tetapi jika tidak maka akan menampilkan pesan tidak boleh memberikan suara
+
+#### Screenshot Program:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Guided%204.png)
+
+#### Screenshot Output:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Guided%204.png)
 
 ## Unguided 
 
@@ -241,13 +262,10 @@ Kode print_prime_pattern(jumlah baris) dipanggil untuk mencetak pola bilangan pr
 Output membentuk segitiga dengan bilangan prima 2 sampai 23.
 
 #### Screenshot Program:
-
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Unguided%201.png)
 
 #### Screenshot Output:
-![image](https://github.com/user-attachments/assets/fc05c081-b447-4e91-a2fc-24f481d8a593)
-
-
-Kode di atas digunakan untuk mencetak teks "ini adalah file code guided praktikan" ke layar menggunakan function print untuk mengeksekusi nya.
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Unguided%201.png)
 
 ### 2. Membuat Fungsi dengan Syarat Spesifik
 Buatlah sebuah fungsi yang menerima dua input berupa list angka. Fungsi ini harus mengembalikan sebuah list baru yang berisi elemen dari dua list input yang memiliki indeks ganjil. 
@@ -302,9 +320,10 @@ print(result) digunakan untuk mencetak isi dari result.
 Output menampilkan angka dari indeks ganjil.
 
 #### Screenshot Program:
-
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Unguided%202.png)
 
 #### Screenshot Output:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Unguided%202.png)
 
 ### 3. Buat sebuah program untuk mensimulasikan transaksi ATM. Program harus:
 1. Meminta pengguna memasukkan PIN (dibatasi 3 kali percobaan).
@@ -411,9 +430,10 @@ Penarikan berhasil! Saldo akhir Anda: 50000.0
 output yang ditampilkan adalah user memasukkan PIN atm nya jika benar maka user dapat memasukkan nominal yang ingin ditarik, setelah nominal yang ditarik berhasil maka akan menampilkan saldo akhir sete;ah ditarik.
 
 #### Screenshot Program:
-
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Unguided%203.png)
 
 #### Screenshot Output:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Unguided%203.png)
 
 ### 4. Studi Kasus Pengelolaan Data
 Anda diberikan file CSV berisi data nilai ujian mahasiswa. Tugas Anda adalah menulis sebuah program yang:
@@ -513,11 +533,10 @@ Mahasiswa dengan nilai terendah: Siswa_5 (50.00)
 ```
 
 #### Screenshot Program:
-
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Unguided%204.png)
 
 #### Screenshot Output:
-
-
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20unguided%204.png)
 
 ### 5. Kombinasi Logika dan Kreativitas
 Buatlah permainan sederhana menggunakan Python, di mana komputer akan memilih sebuah angka secara acak antara 1 hingga 100, dan pengguna harus menebak angka tersebut. Setiap tebakan yang salah akan memberikan petunjuk apakah angka yang ditebak lebih besar atau lebih kecil dari angka sebenarnya. Batasi jumlah percobaan menjadi 5 kali. Setelah permainan selesai, tampilkan apakah pemain menang atau kalah.
@@ -644,7 +663,6 @@ if __name__ == "__main__":
 ```
 Kode diatas digunakan untuk memastikan bahwa fungsi tebak_angka() akan dipanggil jika skrip dieksekusi secara langsung.
 
-
 #### Output
 ```
 Selamat datang di permainan Tebak Angka!
@@ -662,11 +680,13 @@ Tebakan ke-5:  99
 Angka yang ditebak terlalu besar.
 Sayang sekali! Percobaan anda telah habis. Angka yang benar adalah 93.
 ```
+Menampilkan sebuah permainan tebak angka dimana user memiliki 5 kesempatan untuk menebak angka berada yang di pegang oleh komputer.
 
 #### Screenshot Program:
-
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Unguided%205.png)
 
 #### Screenshot Output:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Unguided%205.png)
 
 ### 6. Rekursi yang Tidak Biasa
 Buat fungsi rekursif yang menerima input bilangan bulat `n` dan menghasilkan urutan bilangan seperti berikut ini:
@@ -743,9 +763,10 @@ Output: 1, 1, 2, 6, 24
 output diatas dinama input n yaitu 4 dengan outputnya 1, 1, 2, 6, 24.
 
 #### Screenshot Program:
-
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Unguided%206.png)
 
 #### Screenshot Output:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Unguided%206.png)
 
 ### 7. Pemrograman dengan Algoritma Greedy
 Buatlah program untuk memecahkan masalah "minimum coin change". Diberikan jumlah uang dan daftar nilai koin yang tersedia (misalnya, 1, 5, 10, 25), tentukan kombinasi minimum koin yang diperlukan untuk mencapai jumlah uang tersebut. Namun, program Anda harus bisa menangani koin-koin yang nilai dan jumlahnya ditentukan pengguna.
@@ -820,6 +841,19 @@ if __name__ == "__main__":
 ```
 Kode diatas digunakan untuk memastikan bahwa kode dieksekusi jika file ini dijalankan sebagai skrip utama. target diambil dari input pengguna dan dikoenversikan menjadi int.
 
+#### Output
+```
+Masukkan jumlah target koin:  50
+Masukkan koin yang tersedia (pisahkan menggunakan koma):  10, 25, 45
+Kombinasi minimum koin yang diperlukan untuk mencapai 50 adalah: 2 koin.
+```
+
+#### Screenshot Program:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Unguided%207.png)
+
+#### Screenshot Output:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Unguided%207.png)
+
 ### 8. Kombinasi String dan Manipulasi List
 Buat sebuah program yang menerima string dari pengguna dan mengonversi string tersebut menjadi sebuah list berisi kata-kata terbalik. Misalnya:
 ```
@@ -868,10 +902,10 @@ Output: ['ayaS', 'akuS', 'DSPI']
 user menginputkan kata saat program dijalankan.], lalu untuk outputnya mengonversi kata kata menjadi terbalik.
 
 #### Screenshot Program:
-
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Unguided%208.png)
 
 #### Screenshot Output:
-
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Unguided%208.png)
 
 ### 9. Konsep Class dan Object-Oriented Programming
 Buat class bernama `Buku` yang memiliki atribut `judul`, `penulis`, dan `tahun_terbit`. Buat method dalam class untuk menampilkan informasi buku, serta method untuk menghitung usia buku berdasarkan tahun saat ini. Buatlah 3 objek dari class `Buku` dan tampilkan informasi serta usia masing-masing buku.
@@ -987,13 +1021,13 @@ Usia Buku: 4 tahun
 User akan diminta untuk memasukkan judul buku, penulis buku, dan tahun terbit buku. setelah semua informasi sudah diinputkan oleh user maka akan menampilkan infromasi mengenai buku yang baru diinputkan dengan tambahan usia buku.
 
 #### Screenshot Program:
-
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Unguided%209.png)
 
 #### Screenshot Output:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Unguided%209.png)
 
 ### 10. Algoritma dengan Persyaratan Logika Khusus
 Buatlah program yang mengimplementasikan algoritma pencarian biner, namun dengan modifikasi: algoritma harus bisa mencari nilai di list yang hanya berisi angka genap, dan jika nilai yang dicari adalah angka ganjil, program harus menampilkan pesan bahwa nilai tersebut tidak bisa ditemukan.
-
 
 #### Jawaban
 ```
@@ -1086,7 +1120,18 @@ if __name__ == "__main__":
 ```
 Kode ini memastikan bahwa fungsi main() hanya dipanggil ketika file dijalankan sebagai program utama.
 
+#### Output
+```
+Masukkan daftar angka genap (pisahkan menggunakan spasi):  2 4 6 8 10 12 14
+Masukkan angka yang ingin dicari:  10
+Nilai 10 berada di indeks 4.
+```
 
+#### Screenshot Program:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Unguided%2010.png)
+
+#### Screenshot Output:
+![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Unguided%2010.png)
 
 ## Kesimpulan
 Ringkasan dan interpretasi pandangan kalia dari hasil praktikum dan pembelajaran yang didapat[1].
