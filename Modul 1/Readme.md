@@ -582,7 +582,7 @@ def urutan_faktorial(n):
     if n < 1:
         return []
     
-    return [faktorial(i) for i in range(n + 1)]  # Termasuk 0!
+    return [faktorial(i) for i in range(n + 1)] 
 
 if __name__ == "__main__":
     n = 4
@@ -594,10 +594,391 @@ if __name__ == "__main__":
 
 **Code 1**
 ```
+def faktorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * faktorial(n - 1)
+```
+Mendefinisikan fungsi faktorial(n) untuk menghitung nilai faktorial dari bilangan bulat n.
+Jikan n lebih dari 1, maka fungsi akan mengalikan n dengan hasil dari faktorian(n - 1) sehingga menghitung faktorial secara rekrusif.
+
+**Code 2**
+```
+def urutan_faktorial(n):    
+    if n < 1:
+        return []
+    
+    return [faktorial(i) for i in range(n + 1)] 
+```
+Mendefinisikan fungsi urutan_faktorial(n) yang menghasilkan daftar yang berisi nilai faktorial dari semua angka yaitu dari 0 hingga n. 
+Jika n kurang dari 1 maka fungsi akan mengembalikan daftar kosong.
+
+**Code 3**
+```
+if __name__ == "__main__":
+    n = 4
+    hasil = urutan_faktorial(n)
+```
+Kode diatas digunakan unruk memastikan bahwa kode di dalamnya hanya dieksekusi jika file ini dijalankan sebagai skrip utama. n diatur ke 4 yang merupakan input untuk fungsio urutan_faktporial.
+
+**Code 4**
+```
+print("Input: n =", n)
+    print("Output:", ", ".join(map(str, hasil)))
+```
+kode diatas digunakan untuk mencetak input n dan mencetak output dalam format.
+
+#### Output
+```
+Input: n = 4
+Output: 1, 1, 2, 6, 24
+```
+output diatas dinama input n yaitu 4 dengan outputnya 1, 1, 2, 6, 24.
+
+#### Screenshot Program:
 
 
+#### Screenshot Output:
+
+### 7. Pemrograman dengan Algoritma Greedy
+Buatlah program untuk memecahkan masalah "minimum coin change". Diberikan jumlah uang dan daftar nilai koin yang tersedia (misalnya, 1, 5, 10, 25), tentukan kombinasi minimum koin yang diperlukan untuk mencapai jumlah uang tersebut. Namun, program Anda harus bisa menangani koin-koin yang nilai dan jumlahnya ditentukan pengguna.
+
+#### Jawaban
+```
+def minimum_coin_change(target, coin):
+    dp = [float('inf')] * (target + 1)
+    dp[0] = 0  
+
+    for koin in coin:
+        for amount in range(koin, target + 1):
+            dp[amount] = min(dp[amount], dp[amount - koin] + 1)
+
+    if dp[target] == float('inf'):
+        return -1  
+
+    return dp[target]
+
+if __name__ == "__main__":    
+    target = int(input("Masukkan jumlah target koin: "))
+    coin_input = input("Masukkan koin yang tersedia (pisahkan menggunakan koma): ")
+    coin = list(map(int, coin_input.split(',')))
+
+    result = minimum_coin_change(target, coin)
+
+    if result != -1:
+        print(f"Kombinasi minimum koin yang diperlukan untuk mencapai {target} adalah: {result} koin.")
+    else:
+        print(f"Tidak ada kombinasi koin yang dapat mencapai {target}.")
+```
+
+**Code 1**
+```
+def minimum_coin_change(target, coin):
+    dp = [float('inf')] * (target + 1)
+    dp[0] = 0  
+```
+Mendefinisikan fungsi yang menerima dua parameter yaitu target.
+
+**Code 2**
+```
+ for koin in coin:
+        for amount in range(koin, target + 1):
+            dp[amount] = min(dp[amount], dp[amount - koin] + 1)
+```
+Pengulangan melalui setiap koin di dalam daftar coin. Loop jumlah digunakan untuk setiap nilai koin, loop kedua pengulangan dari nilai koin sampai target.
+Kode diatas menggunakan rumus untuk menghitung perhitungan minimum. Fungsi min digunakan untuk memperbarui dp[amount] dengan nilai terkecil.
+
+**Code 3**
+```
+if dp[target] == float('inf'):
+        return -1  
+
+    return dp[target]
+```
+Jika dp[target] masih float('inf'} artinya tidak ada kombinasi koin yang mencapai target. jika mencapai target maka akan mengembalikan nilai dp[target].
+
+**Code 4**
+```
+if __name__ == "__main__":    
+    target = int(input("Masukkan jumlah target koin: "))
+    coin_input = input("Masukkan koin yang tersedia (pisahkan menggunakan koma): ")
+    coin = list(map(int, coin_input.split(',')))
+
+    result = minimum_coin_change(target, coin)
+
+    if result != -1:
+        print(f"Kombinasi minimum koin yang diperlukan untuk mencapai {target} adalah: {result} koin.")
+    else:
+        print(f"Tidak ada kombinasi koin yang dapat mencapai {target}.")
+```
+Kode diatas digunakan untuk memastikan bahwa kode dieksekusi jika file ini dijalankan sebagai skrip utama. target diambil dari input pengguna dan dikoenversikan menjadi int.
+
+### 8. Kombinasi String dan Manipulasi List
+Buat sebuah program yang menerima string dari pengguna dan mengonversi string tersebut menjadi sebuah list berisi kata-kata terbalik. Misalnya:
+```
+Input: "Saya suka Python"
+Output: ["ayaS", "akus", "nohtyP"]
+```
+
+#### Jawaban
+```
+def reverse_words(input_string):
+    words = input_string.split()
+    reversed_words = [word[::-1] for word in words]
+    return reversed_words
+
+if __name__ == "__main__":
+    user_input = input("Input: ")
+    result = reverse_words(user_input)
+    
+    print("Output:", result)
+```
+
+**Code 1**
+```
+def reverse_words(input_string):
+    words = input_string.split()
+    reversed_words = [word[::-1] for word in words]
+    return reversed_words
+```
+Mendefinisikan fungsi yang digunakan untuk menerima satu parameter input_string yang berisikan kalimat yang akan diolah.
+
+**Code 2**
+```
+if __name__ == "__main__":
+    user_input = input("Input: ")
+    result = reverse_words(user_input)
+    
+    print("Output:", result)
+```
+Kode diatas dijalankan jika file ini dieksekusi sebagai skrip utama. dengan input dari pengguna, dan pemanggilan fungsi.
+
+#### Ouput
+```
+Input:  Saya Suka IPSD
+Output: ['ayaS', 'akuS', 'DSPI']
+```
+user menginputkan kata saat program dijalankan.], lalu untuk outputnya mengonversi kata kata menjadi terbalik.
+
+#### Screenshot Program:
 
 
+#### Screenshot Output:
+
+
+### 9. Konsep Class dan Object-Oriented Programming
+Buat class bernama `Buku` yang memiliki atribut `judul`, `penulis`, dan `tahun_terbit`. Buat method dalam class untuk menampilkan informasi buku, serta method untuk menghitung usia buku berdasarkan tahun saat ini. Buatlah 3 objek dari class `Buku` dan tampilkan informasi serta usia masing-masing buku.
+
+#### Jawaban
+```
+class Buku:
+    def __init__(self, judul, penulis, tahun_terbit):
+        self.judul = judul
+        self.penulis = penulis
+        self.tahun_terbit = tahun_terbit
+
+    def tampilkan_informasi(self):
+        print(f"Judul: {self.judul}")
+        print(f"Penulis: {self.penulis}")
+        print(f"Tahun Terbit: {self.tahun_terbit}")
+
+    def usia_buku(self, tahun_sekarang):
+        return tahun_sekarang - self.tahun_terbit
+
+def input_buku():
+    judul = input("Masukkan judul buku: ")
+    penulis = input("Masukkan penulis buku: ")
+    tahun_terbit = int(input("Masukkan tahun terbit buku: "))
+    return Buku(judul, penulis, tahun_terbit)
+
+list_buku = []
+for i in range(1):
+    print(f"\nInput untuk buku ke-{i + 1}:")
+    buku = input_buku()
+    list_buku.append(buku)
+
+tahun_sekarang = 2024
+
+print("\nInformasi Buku:")
+for buku in list_buku:
+    buku.tampilkan_informasi()
+    usia = buku.usia_buku(tahun_sekarang)
+    print(f"Usia Buku: {usia} tahun\n")
+```
+
+**Code 1**
+```
+class Buku:
+    def __init__(self, judul, penulis, tahun_terbit):
+        self.judul = judul
+        self.penulis = penulis
+        self.tahun_terbit = tahun_terbit
+```
+Mendefinisikan class Buku. metode init adalah kontruktor yang dipanggil saat membuat objek baru dari kelas ini dengan 3 atribut diinisialisasi yaitu self.judul, self.penulis, dan self. tahun_terbit.
+
+**Code 2**
+```
+ def tampilkan_informasi(self):
+        print(f"Judul: {self.judul}")
+        print(f"Penulis: {self.penulis}")
+        print(f"Tahun Terbit: {self.tahun_terbit}")
+```
+Metode tampilkan_informasi digunakan untuk mencetak infromasi tentang buku termasuk judul, penulis, dan tahun terbit.
+
+**Code 3**
+```
+ def usia_buku(self, tahun_sekarang):
+        return tahun_sekarang - self.tahun_terbit
+```
+Metode usia_buku digunakan untuk menghitung usia buku berdasarkan tahun terbit dan tahun saat ini.
+
+**Code 4**
+```
+def input_buku():
+    judul = input("Masukkan judul buku: ")
+    penulis = input("Masukkan penulis buku: ")
+    tahun_terbit = int(input("Masukkan tahun terbit buku: "))
+    return Buku(judul, penulis, tahun_terbit)
+```
+Fungsi ini mengumpulkan informasi tentang buku dari pengguna. pengguna akan menginputkan judul buku, penulis, dan tahun terbit. Lalu mengembalikan objek Buku yang baru dibuat.
+
+**Code 5**
+```
+list_buku = []
+for i in range(1):
+    print(f"\nInput untuk buku ke-{i + 1}:")
+    buku = input_buku()
+    list_buku.append(buku)
+```
+Inisialisasi list dengan nama list_buku untuk menyimpan objek Buku. Lalu melakukan satu perulangan atau looping.
+
+**Code 6**
+```
+tahun_sekarang = 2024
+
+print("\nInformasi Buku:")
+for buku in list_buku:
+    buku.tampilkan_informasi()
+    usia = buku.usia_buku(tahun_sekarang)
+    print(f"Usia Buku: {usia} tahun\n")
+```
+Kode diatas mendefinisikan tahun_sekarang sebagai 2024. Lalu melakukan loop untuk menampilkan informasi yaitu setiap objek Buku dalam list_buku, memanggil metode tampilkan_infromasi untuk detail buku dan menghitung serta menampilkan usia buku menggunakan metode usia_buku
+
+#### Output
+```
+Input untuk buku ke-1:
+Masukkan judul buku:  The Story We Can
+Masukkan penulis buku:  Rizal Wahyu Pratama
+Masukkan tahun terbit buku:  2020
+
+Informasi Buku:
+Judul: The Story We Can
+Penulis: Rizal Wahyu Pratama
+Tahun Terbit: 2020
+Usia Buku: 4 tahun
+```
+User akan diminta untuk memasukkan judul buku, penulis buku, dan tahun terbit buku. setelah semua informasi sudah diinputkan oleh user maka akan menampilkan infromasi mengenai buku yang baru diinputkan dengan tambahan usia buku.
+
+#### Screenshot Program:
+
+
+#### Screenshot Output:
+
+### 10. Algoritma dengan Persyaratan Logika Khusus
+Buatlah program yang mengimplementasikan algoritma pencarian biner, namun dengan modifikasi: algoritma harus bisa mencari nilai di list yang hanya berisi angka genap, dan jika nilai yang dicari adalah angka ganjil, program harus menampilkan pesan bahwa nilai tersebut tidak bisa ditemukan.
+
+
+#### Jawaban
+```
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    
+    while left <= right:
+        mid = (left + right) // 2
+        
+        if arr[mid] == target:
+            return mid 
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+            
+    return -1  
+
+def main():
+    input_numbers = input("Masukkan daftar angka genap (pisahkan menggunakan spasi): ")
+    even_numbers = list(map(int, input_numbers.split()))
+    
+    if not all(num % 2 == 0 for num in even_numbers):
+        print("Semua angka yang dimasukkan harus genap.")
+        return
+    
+    target = int(input("Masukkan angka yang ingin dicari: "))
+    
+    if target % 2 != 0:
+        print("Nilai tidak dapat ditemukan karena merupakan angka ganjil.")
+    else:
+        index = binary_search(even_numbers, target)
+        if index != -1:
+            print(f"Nilai {target} berada di indeks {index}.")
+        else:
+            print(f"Nilai {target} tidak berada dalam daftar.")
+
+if __name__ == "__main__":
+    main()
+```
+
+**Code 1**
+```
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    
+    while left <= right:
+        mid = (left + right) // 2
+        
+        if arr[mid] == target:
+            return mid 
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+            
+    return -1
+```
+Fungsi binary_search digunakan untuk mencari target dalam array untuk menggunakan metode pencarian biner. 
+Menginisialisasi dua variabel left dan right yang menunjukkan batas kiri dan kanan dari daftar. 
+Menggunakan loop whilw untuk terus mencari selama batas kiri tidak melebihi batas kanan. Lalu menghitung indeks tengah dari rentang yang sedang dicari
+
+**Code 2**
+```
+def main():
+    input_numbers = input("Masukkan daftar angka genap (pisahkan menggunakan spasi): ")
+    even_numbers = list(map(int, input_numbers.split()))
+    
+    if not all(num % 2 == 0 for num in even_numbers):
+        print("Semua angka yang dimasukkan harus genap.")
+        return
+    
+    target = int(input("Masukkan angka yang ingin dicari: "))
+    
+    if target % 2 != 0:
+        print("Nilai tidak dapat ditemukan karena merupakan angka ganjil.")
+    else:
+        index = binary_search(even_numbers, target)
+        if index != -1:
+            print(f"Nilai {target} berada di indeks {index}.")
+        else:
+            print(f"Nilai {target} tidak berada dalam daftar.")
+```
+Fungsi main digunakan untuk mentaur interaksi dengan pengguna untuk menerima input dan memanggil fungsi pencarian biner. program akan meminta pengguna untuk memasukan daftar angka genap dan memisahkannya dengan spasi.
+
+**Code 3**
+```
+if __name__ == "__main__":
+    main()
+```
+Kode ini memastikan bahwa fungsi main() hanya dipanggil ketika file dijalankan sebagai program utama.
 
 
 
