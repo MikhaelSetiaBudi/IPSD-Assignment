@@ -358,6 +358,246 @@ Mendefinisikan fungsi baca_data_csv untuk mengambil satu argumen yang merupakan 
 pd.read_csv(nama_file) digunakan untuk membaca file CSV dan mengembalikan sebagai objek DataFrame pandas.
 
 **Code 3**
+```
+def hitung_rata_rata_nilai(data_mahasiswa):
+    return data_mahasiswa['Nilai'].mean()
+```
+Mendefinisikan Fungsi hitung_rata_rata_nilai untuk mengambil satu argumen yaitu data_mahasiswa yang merupakan DataFrame yang berisikan data mahasiswa. Lalu menghitung rata rata dengan mengakses kolon Nilai dari DataFrame dengan menggunakan metode .mean() untuk menghitung rata-rata nilai mahasiwa.
+
+**Code 4**
+```
+def mahasiswa_terbaik_dan_terburuk(data_mahasiswa):
+    mahasiswa_terbaik = data_mahasiswa.loc[data_mahasiswa['Nilai'].idxmax()]
+    mahasiswa_terburuk = data_mahasiswa.loc[data_mahasiswa['Nilai'].idxmin()]
+    return mahasiswa_terbaik, mahasiswa_terburuk
+```
+Mendefinisikan fungsi mahasiswa_terbaik_dan_terburuk yang mengambil satu argumen yaitu data_mahasiswa. Menggunakan metode idxmax() untuk menemukan indeks dari nilai maksimum dalam kolom Nilai. 
+data_mahasiswa.loc[] digunakan untuk mengakses baris dari DataFrame untuk mendapatkan informasi lengkap mahasiswa terbaik.
+Menggunakan idxmin() untuk menemukan indeks dari nilai minimum di kolom Nilai. Kode diatas mengembalikan dua hasil yaitu mahasiswa terbaik dan terburuk.
+
+**Code 5**
+```
+def main():
+    nama_file = 'siswa_nilai.csv'    
+    data_mahasiswa = baca_data_csv(nama_file)
+    rata_rata = hitung_rata_rata(data_mahasiswa)
+    print(f"Rata-rata nilai: {rata_rata:.2f}")
+    terbaik, terburuk = mahasiswa_terbaik_dan_terburuk(data_mahasiswa)
+    print(f"\nMahasiswa dengan nilai tertinggi: {terbaik['Nama Siswa']} ({terbaik['Nilai']:.2f})")
+    print(f"Mahasiswa dengan nilai terendah: {terburuk['Nama Siswa']} ({terburuk['Nilai']:.2f})")
+```
+Mendefinisikan fungsi main yang digunakan sebagai titik masuk untuk menjalankan program. Kode diatas digunakan untuk mendefinisikan nama file CSV yang akan dibaca, memanggil fungsi, dan membaca data dari file.
+Selain untuk membaca data, kode diatas digunakan untuk menghitung rata-rata dengan memanggil fungsi untuk menghitung rata-rata nilai. 
+Print digunakan untuk mencetak hasil rata-rata dengan dua angka di belakang koma. 
+Mencari mahasiswa terbaik dan terburuk dengan memanggil fungsi untuk mendapatkan mahasiswa dengan nilai terbaik dan terburuk, lalu mencetak nama dan nilai mahasiswa dengan format yang sesuai
+
+**Code 6**
+```
+if __name__ == "__main__":
+    main()
+```
+Kode diatas digunakan untuk menjalankan program dengan memastikan bahwa main() hanya akan dipanggil jika skrip dieksekusi secara langsung.
+
+#### Output
+```
+Rata-rata nilai: 72.00
+
+Mahasiswa dengan nilai tertinggi: Siswa_7 (100.00)
+Mahasiswa dengan nilai terendah: Siswa_5 (50.00)
+```
+
+#### Screenshot Program:
+
+
+#### Screenshot Output:
+
+
+
+### 5. Kombinasi Logika dan Kreativitas
+Buatlah permainan sederhana menggunakan Python, di mana komputer akan memilih sebuah angka secara acak antara 1 hingga 100, dan pengguna harus menebak angka tersebut. Setiap tebakan yang salah akan memberikan petunjuk apakah angka yang ditebak lebih besar atau lebih kecil dari angka sebenarnya. Batasi jumlah percobaan menjadi 5 kali. Setelah permainan selesai, tampilkan apakah pemain menang atau kalah.
+
+#### Jawaban
+```
+import random
+
+def tebak_angka():
+    
+    angka_acak = random.randint(1, 100)
+    jumlah_percobaan = 5
+    
+    print("Selamat datang di permainan Tebak Angka!")
+    print("Saya sudah memilih angka diantara 1 hingga 100.")
+    print(f"Anda memiliki {jumlah_percobaan} kali percobaan untuk menebak angka tersebut.")
+
+    for percobaan in range(1, jumlah_percobaan + 1):
+        try:
+            tebakan = int(input(f"Tebakan ke-{percobaan}: "))
+            
+            if tebakan < 1 or tebakan > 100:
+                print("Tebakan harus diantara 1 hingga 100. Silakan coba lagi.")
+                continue
+            
+            if tebakan < angka_acak:
+                print("Angka yang ditebak terlalu kecil.")
+            elif tebakan > angka_acak:
+                print("Angka yang ditebak terlalu besar.")
+            else:
+                print(f"Selamat! Anda berhasil menebak angka {angka_acak} dalam {percobaan} percobaan.")
+                break
+        except ValueError:
+            print("Input tidak valid. Diharapkan untuk memasukkan angka.")
+
+    else:
+        print(f"Sayang sekali! Percobaan anda telah habis. Angka yang benar adalah {angka_acak}.")
+
+if __name__ == "__main__":
+    tebak_angka()
+```
+
+**Code 1**
+```
+import random
+```
+Kode diatas digunakan untuk mengimport library yaitu modul random yang digunakan untuk menghasilkan bilangan acak.
+
+**Code 2**
+```
+def tebak_angka():
+```
+Mendefinisikan fungsi tebak_angka yang akan menjalankan logika permainannya.
+
+**Code 3**
+```
+ angka_acak = random.randint(1, 100)
+    jumlah_percobaan = 5
+```
+Kode diatas digunakan untuk menginisialisasi variabel angka_acak untuk menghasilkan angka acak antara 1 dan 100 menggunakan random.radint(1, 100)
+dimana antara angka tersebut yang harus ditebak oleh pemain. jumlah_percobaan digunakan untuk menentukan banyaknya percobaan
+yang diberikan kepada pemain sebanyak 5 kali percobaan.
+
+**Code 4**
+```
+  print("Selamat datang di permainan Tebak Angka!")
+    print("Saya sudah memilih angka diantara 1 hingga 100.")
+    print(f"Anda memiliki {jumlah_percobaan} kali percobaan untuk menebak angka tersebut.")
+```
+Print digunakan untuk mencetak pesan sambutan dan informasi mengenain permainan kepada pemain.
+
+**Code 5**
+```
+   for percobaan in range(1, jumlah_percobaan + 1):
+```
+Looping for digunakan untuk setiap percobaan dari 1 hingga 5 percobaan.
+
+**Code 6**
+```
+try:
+     tebakan = int(input(f"Tebakan ke-{percobaan}: "))
+```
+Menggunakan blok try untuk menangkap kemungkinan kesalahan saat konversi input.
+Lalu mengambil input tebakan dari pengguna dan mencoba mengkonversi menjadi int. Lalu nilai akan disimpan dalam variabel tebakan.
+
+**Code 7**
+```
+ if tebakan < 1 or tebakan > 100:
+                print("Tebakan harus diantara 1 hingga 100. Silakan coba lagi.")
+                continue
+```
+Validasi input akan memeriksa apakah tebakan berada dalam rentang 1 hingga 100.
+
+**Code 8**
+```
+          if tebakan < angka_acak:
+                print("Angka yang ditebak terlalu kecil.")
+            elif tebakan > angka_acak:
+                print("Angka yang ditebak terlalu besar.")
+            else:
+                print(f"Selamat! Anda berhasil menebak angka {angka_acak} dalam {percobaan} percobaan.")
+                break
+```
+Jika tebakan kurang dari angka_acak maka akan mencetak pesan bahwa angka terlalu kecil, apabila tebalan lebih besar, maka akan mencetak bahwa angka terlalu besar. Jika tebakan benar maka akan mencetak pesan selamat dan keluar dari loop dengan break.
+
+**Code 9**
+```
+except ValueError:
+            print("Input tidak valid. Diharapkan untuk memasukkan angka.")
+```
+except digunakan untuk menangkap kesalahan ValueError yang mungkin terjadi.
+
+**Code 10**
+```
+else:
+        print(f"Sayang sekali! Percobaan anda telah habis. Angka yang benar adalah {angka_acak}.")
+```
+Jika loop selesai tanpa break maka akan mencetak pesan bahwa percobaan telah habis lalu menunjukkan angka yang benar.
+
+**Code 11**
+```
+if __name__ == "__main__":
+    tebak_angka()
+```
+Kode diatas digunakan untuk memastikan bahwa fungsi tebak_angka() akan dipanggil jika skrip dieksekusi secara langsung.
+
+
+#### Output
+```
+Selamat datang di permainan Tebak Angka!
+Saya sudah memilih angka diantara 1 hingga 100.
+Anda memiliki 5 kali percobaan untuk menebak angka tersebut.
+Tebakan ke-1:  40
+Angka yang ditebak terlalu kecil.
+Tebakan ke-2:  50
+Angka yang ditebak terlalu kecil.
+Tebakan ke-3:  70
+Angka yang ditebak terlalu kecil.
+Tebakan ke-4:  90
+Angka yang ditebak terlalu kecil.
+Tebakan ke-5:  99
+Angka yang ditebak terlalu besar.
+Sayang sekali! Percobaan anda telah habis. Angka yang benar adalah 93.
+```
+
+#### Screenshot Program:
+
+
+#### Screenshot Output:
+
+### 6. Rekursi yang Tidak Biasa
+Buat fungsi rekursif yang menerima input bilangan bulat `n` dan menghasilkan urutan bilangan seperti berikut ini:
+```
+Input: n = 4
+Output: 1, 1, 2, 6, 24
+```
+Fungsi ini harus menggunakan konsep rekursi untuk menghitung faktorial setiap angka hingga `n`.
+
+#### Jawaban
+```
+def faktorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * faktorial(n - 1)
+
+def urutan_faktorial(n):    
+    if n < 1:
+        return []
+    
+    return [faktorial(i) for i in range(n + 1)]  # Termasuk 0!
+
+if __name__ == "__main__":
+    n = 4
+    hasil = urutan_faktorial(n)
+    
+    print("Input: n =", n)
+    print("Output:", ", ".join(map(str, hasil)))
+```
+
+**Code 1**
+```
+
+
+
+
 
 
 
