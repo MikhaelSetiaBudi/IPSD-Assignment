@@ -135,6 +135,12 @@ else:
 ```
 Membuat variabel ange dengan nilai 18, lalu membuat kondisi jika age lebih dari sama dengan 18 maka akan menampilkan pesan Boleh memberikan suara, tetapi jika tidak maka akan menampilkan pesan tidak boleh memberikan suara
 
+#### Output
+```
+Boleh memberikan suara
+```
+dikarenakan age lebih besar sama dengan 18 maka program mencetak kata Boleh memberikan suara
+
 #### Screenshot Program:
 ![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Guided%204.png)
 
@@ -531,6 +537,7 @@ Rata-rata nilai: 72.00
 Mahasiswa dengan nilai tertinggi: Siswa_7 (100.00)
 Mahasiswa dengan nilai terendah: Siswa_5 (50.00)
 ```
+Ketika program dijalankan maka akan memunculkan rata-rata dari nilai dalam data siswa_nilai lalu mencari mahasiswa dengan nilai tertinggi dan nilai terendah dan terdapat grade dari siswa tersebut.
 
 #### Screenshot Program:
 ![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Unguided%204.png)
@@ -847,6 +854,7 @@ Masukkan jumlah target koin:  50
 Masukkan koin yang tersedia (pisahkan menggunakan koma):  10, 25, 45
 Kombinasi minimum koin yang diperlukan untuk mencapai 50 adalah: 2 koin.
 ```
+User akan memasukkan jumlah target dari koin, lalu user memasukkan koin yang tersedia lalu program akan mengkombinasikan koin yang tersedia untuk mencapai target koin.
 
 #### Screenshot Program:
 ![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Unguided%207.png)
@@ -1126,6 +1134,7 @@ Masukkan daftar angka genap (pisahkan menggunakan spasi):  2 4 6 8 10 12 14
 Masukkan angka yang ingin dicari:  10
 Nilai 10 berada di indeks 4.
 ```
+user akan memasukkan daftar angka genap yang dipisahkan dengan spasi, lalu user akan memasukkan angka yang ingin dicari setelah itu program akan mencari nilai 10 terdapat di indeks ke 4.
 
 #### Screenshot Program:
 ![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Unguided%2010.png)
@@ -1138,5 +1147,6 @@ Python untuk sains data banyak digunakan mulai dari algoritma pencarian, simulas
 
 ## Referensi
 [1]	  A. M. Priyatno, F. I. Firmanda, R. J. Farhas, F. Amalia, and W.         F. R. Sudirman, “Pelatihan Data Science menggunakan Bahasa              Pemrograman Python di PT Ilmu Data Indonesia,” Dedik. J.                Pengabdi. Pendidik. dan Teknol. Masy., vol. 1, no. 1, pp. 31–36,        2023, doi: 10.31004/dedikasi.v1i1.12.
+
 [2]	A. J. Matematika, A. Sains, S. Hakim, D. N. Alano, A. Rakhi, and P. Rifanka, “Pengembangan Algoritma Python untuk Perhitungan Limit dalam Konteks Matematika Terapan,” vol. 1, no. 1, pp. 36–40, 2023.
 
