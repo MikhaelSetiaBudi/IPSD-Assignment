@@ -31,12 +31,12 @@ Operator yang digunakan untuk menggabungkan ekspresi boolean seperti:
 
 ### Fungsi dan Perulangan
 #### Fungsi
-Fungsi merup[akan blok kode yang bisa digunakan kembali. 
+Fungsi merupakan blok kode yang bisa digunakan kembali. 
 1. Definisi : menggunakan def diikuti nama fungsi
 2. Fungsi Built-in: Python memiliki fungsi bawaan seperti len(), sum(), max().
 
 #### Pengulangan (loops)
-pengulangan digunakan untuk mengiterasi elemen-elemen dalam struktur data.
+pengulangan digunakan untuk mengiterasi elemen-elemen dalam struktur data. Iterasi berhenti ketika nilai limit  telah mendekati nilai yang diinginkan [2].
 
 ### Percabangan
 Percabangan digunakan untuk pengambilan keputusan berdasarkan kondisi.
@@ -1138,5 +1138,5 @@ Python untuk sains data banyak digunakan mulai dari algoritma pencarian, simulas
 
 ## Referensi
 [1]	  A. M. Priyatno, F. I. Firmanda, R. J. Farhas, F. Amalia, and W.         F. R. Sudirman, “Pelatihan Data Science menggunakan Bahasa              Pemrograman Python di PT Ilmu Data Indonesia,” Dedik. J.                Pengabdi. Pendidik. dan Teknol. Masy., vol. 1, no. 1, pp. 31–36,        2023, doi: 10.31004/dedikasi.v1i1.12.
-
+[2]	A. J. Matematika, A. Sains, S. Hakim, D. N. Alano, A. Rakhi, and P. Rifanka, “Pengembangan Algoritma Python untuk Perhitungan Limit dalam Konteks Matematika Terapan,” vol. 1, no. 1, pp. 36–40, 2023.
 
