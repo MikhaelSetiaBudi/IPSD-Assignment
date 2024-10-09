@@ -62,48 +62,15 @@ serta import library pandas dengan alias pd, berikutnya import library numpy den
 ```
 df = pd.read_csv('/Movie_classification.csv')
 df.head(10)
+df.tail()
 ```
+kode diatas digunakan untuk mendefinisikan variabel df dengan data csv Movie_classification. untuk head digunakan untuk menampilkan data atas, lalu tail digunakan untuk menampilkan data akhir.
 
-
-#### Output
 ```
-Nama : Budi 
-Umur : 20
+df.info()
 ```
-Menampilkan nama dan umur dari budi.
+digunakan untuk menampilkan daftar kolom, data yang rusak, dan type data dari setiap kolom.
 
-#### Screenshot Program:
-![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Guided%201.png)
-
-#### Screenshot Output:
-![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Guided%201.png)
-
-### 2. Buat program yang menerima input dan menampilkan kalimat tersebut sebanyak 5 kali
-
-#### Jawaban
-```
-sentence = input("Masukkan Kalimat: ")
-for _ in range(5):
-    print(sentence)
-```
-Kode diatas mendeklarasikan variabel sentence yang di dalamnya akan meminta user untuk menginputkan kalimat. lalu for _ in rang (5) merupakan kondisi dimana kata akan ditampilkan sebanyak 5 kali. Lalu memanggil variabel sentence.
-
-#### Output
-```
-Masukkan Kalimat:  Data Science
-Data Science
-Data Science
-Data Science
-Data Science
-Data Science
-```
-kegtika program dijalankan maka program akan meminta input kalimat ke user, setelah kalimat di inputkan maka program akan menampilkan sebanyak 5 kali.
-
-#### Screenshot Program:
-![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Code/Code%20Guided%202.png)
-
-#### Screenshot Output:
-![image](https://github.com/MikhaelSetiaBudi/IPSD-Assignment/blob/main/Modul%201/Output/Output%20Guided%202.png)
 
 ### 3. Buat program yang memeriksa apakah sebuah nilai lebih besar dari 100
 
